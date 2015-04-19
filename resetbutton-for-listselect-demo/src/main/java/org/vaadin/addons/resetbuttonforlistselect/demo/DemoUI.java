@@ -33,11 +33,10 @@ public class DemoUI extends UI {
 	protected void init(final VaadinRequest request) {
 
 		final ListSelect listSelect = new ListSelect("Some ListSelect", Arrays.asList("Apple", "Orange", "Pineapple", "Coconut", "Strawberry", "Mango", "Kiwi",
-		        "Banana", "Water Melon", "Lemon fruit", "Date"));
+				"Banana", "Water Melon", "Lemon fruit", "Date"));
 		listSelect.setWidth(200, Unit.PIXELS);
 		listSelect.setHeight(200, Unit.PIXELS);
 		listSelect.setMultiSelect(true);
-		listSelect.setStyleName("test1");
 
 		ResetButtonForListSelect.extend(listSelect);
 

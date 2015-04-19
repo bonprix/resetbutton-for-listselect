@@ -1,18 +1,33 @@
-# MyComponent Add-on for Vaadin 7
+# ResetButtonForListSelect Add-on for Vaadin 7
 
-MyComponent is an UI component add-on for Vaadin 7.
+The ResetButtonForListSelect is a Vaadin extension Add-on which adds a reset button to the caption of a ListSelect class.
+This reset-button will set the value of the extended ListSelect to "null" (via the setValue() method, so also fires valueChangeListeners if registered).
+
+Since the extension adds the reset button to the caption, this Add-on only works, when the extended ListSelect has a caption set before initialy rendered to the screen.
+
+![screenshot](assets/screenshot.png)
 
 ## Online demo
 
-Try the add-on demo at <url of the online demo>
+Try the add-on demo at http://bonprix.jelastic.servint.net/resetbutton-for-listselect-demo/
 
 ## Download release
 
 Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to http://vaadin.com/addon/resetbutton-for-listselect
 
+## Usage
+
+```Java
+		final ListSelect listSelect = new ListSelect("Some ListSelect", Arrays.asList("Apple", "Orange", "Pineapple", "Coconut", "Strawberry", "Mango", "Kiwi",
+		        "Banana", "Water Melon", "Lemon fruit", "Date"));
+
+		ResetButtonForListSelect.extend(listSelect);
+
+```
+
 ## Building and running demo
 
-git clone <url of the MyComponent repository>
+git clone https://github.com/bonprix/resetbutton-for-listselect
 mvn clean install
 cd demo
 mvn jetty:run
@@ -28,38 +43,16 @@ For further development of this add-on, the following tool-chain is recommended:
 - JRebel Eclipse plug-in (install it from Eclipse Marketplace)
 - Chrome browser
 
-### Importing project
-
-Choose File > Import... > Existing Maven Projects
-
-Note that Eclipse may give "Plugin execution not covered by lifecycle configuration" errors for pom.xml. Use "Permanently mark goal resources in pom.xml as ignored in Eclipse build" quick-fix to mark these errors as permanently ignored in your project. Do not worry, the project still works fine. 
-
-### Debugging server-side
-
-If you have not already compiled the widgetset, do it now by running vaadin:install Maven target for resetbutton-for-listselect-root project.
-
-If you have a JRebel license, it makes on the fly code changes faster. Just add JRebel nature to your resetbutton-for-listselect-demo project by clicking project with right mouse button and choosing JRebel > Add JRebel Nature
-
-To debug project and make code modifications on the fly in the server-side, right-click the resetbutton-for-listselect-demo project and choose Debug As > Debug on Server. Navigate to http://localhost:8080/resetbutton-for-listselect-demo/ to see the application.
-
-### Debugging client-side
-
-The most common way of debugging and making changes to the client-side code is dev-mode. To create debug configuration for it, open resetbutton-for-listselect-demo project properties and click "Create Development Mode Launch" button on the Vaadin tab. Right-click newly added "GWT development mode for resetbutton-for-listselect-demo.launch" and choose Debug As > Debug Configurations... Open up Classpath tab for the development mode configuration and choose User Entries. Click Advanced... and select Add Folders. Choose Java and Resources under resetbutton-for-listselect/src/main and click ok. Now you are ready to start debugging the client-side code by clicking debug. Click Launch Default Browser button in the GWT Development Mode in the launched application. Now you can modify and breakpoints to client-side classes and see changes by reloading the web page. 
-
-Another way of debugging client-side is superdev mode. To enable it, uncomment devModeRedirectEnabled line from the end of DemoWidgetSet.gwt.xml located under resetbutton-for-listselect-demo resources folder and compile the widgetset once by running vaadin:compile Maven target for resetbutton-for-listselect-demo. Refresh resetbutton-for-listselect-demo project resources by right clicking the project and choosing Refresh. Click "Create SuperDevMode Launch" button on the Vaadin tab of the resetbutton-for-listselect-demo project properties panel to create superder mode code server launch configuration and modify the class path as instructed above. After starting the code server by running SuperDevMode launch as Java application, you can navigate to http://localhost:8080/resetbutton-for-listselect-demo/?superdevmode. Now all code changes you do to your client side will get compiled as soon as you reload the web page. You can also access Java-sources and set breakpoints inside Chrome if you enable source maps from inspector settings. 
-
  
 ## Release notes
 
-### Version 1.0.0-SNAPSHOT
-- ...
-- ...
+### Version 1.0.0
+
+- initial version, added the reset-button
 
 ## Roadmap
 
-This component is developed as a hobby with no public roadmap or any guarantees of upcoming releases. That said, the following features are planned for upcoming releases:
-- ...
-- ...
+This has no further roadmap so far.
 
 ## Issue tracking
 
@@ -79,32 +72,7 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 
 Add-on is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
 
-MyComponent is written by <...>
+MyComponent is written by Bonprix Handelsges. mbH
 
-# Developer Guide
-
-## Getting started
-
-Here is a simple example on how to try out the add-on component:
-
-<...>
-
-For a more comprehensive example, see src/test/java/org/vaadin/template/demo/DemoUI.java
-
-## Features
-
-### Feature A
-
-<...>
-
-### Feature B
-
-<...>
-
-### Feature C
-
-<...>
-
-## API
-
-MyComponent JavaDoc is available online at <...>
+Developers:
+- Christian Thiel (https://github.com/stoerti)
