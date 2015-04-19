@@ -1,7 +1,21 @@
-div.resetbutton-for-listselect {
+.resetbuttonforlistselect-resetbutton:before {
+	content: "X";
+}
+
+.resetbuttonforlistselect-resetbutton {
+	position: relative;
+	display: inline-block;
+	vertical-align: bottom;
 	cursor: pointer;
-	user-select: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
+	float: right;
+	font-family: FontAwesome;
+}
+
+.resetbuttonforlistselect-resetbutton:hover {
+	color: rgb(67, 150, 234);
+	cursor: pointer;
+}
+
+.v-caption-resetbuttonforlistselect .v-captiontext {
+	float: left;	
 }
