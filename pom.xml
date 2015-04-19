@@ -4,7 +4,7 @@
 	<groupId>org.vaadin.addons</groupId>
 	<artifactId>resetbutton-for-listselect-root</artifactId>
 	<packaging>pom</packaging>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>Resetbutton-for-listselect Add-on Root Project</name>
 
 	<modules>
@@ -46,7 +46,7 @@
 		<connection>scm:git:git@github.com:bonprix/resetbutton-for-listselect.git</connection>
 		<developerConnection>scm:git:git@github.com:bonprix/resetbutton-for-listselect.git</developerConnection>
 		<url>https://github.com/bonprix/resetbutton-for-listselect.git</url>
-		<tag>resetbutton-for-listselect-root-1.0.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<repositories>
